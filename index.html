@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Salon & Spa | Premium Beauty, Unbeatable Value</title>
+    <style>
+        /* Mobile-Optimized Rose Gold & Cream Blush Palette */
+        :root {
+            --primary-dark: #2c2523;
+            --secondary-dark: #3d3431;
+            --accent-rose: #c18c74; /* Elegant rose gold with high mobile contrast */
+            --accent-rose-hover: #a6735c;
+            --text-light: #ffffff;
+            --text-muted: #7a6e6a;
+            --bg-body: #faf7f5; /* Warm cream blush background */
+            --bg-card: #ffffff;
+            --border-color: #ebdfe6;
+            --whatsapp-green: #25d366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            letter-spacing: 0.3px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--primary-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Responsive Header Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 6%;
+            background-color: var(--bg-card);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: var(--primary-dark);
+        }
+
+        .logo span {
+            color: var(--accent-rose);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-rose);
+        }
+
+        .btn-nav {
+            border: 1.5px solid var(--primary-dark);
+            padding: 8px 18px;
+            border-radius: 4px;
+            transition: all 0.3s ease !important;
+        }
+
+        .btn-nav:hover {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+        }
+
+        /* Hero Showcase Section */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(44, 37, 35, 0.6), rgba(44, 37, 35, 0.6)), url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQG9CYp_2dSzqF-DPOJdjVKU69mAFiHQ8MHLEtX8lY9wsdMQI7OMyK04XCJW2Lmdh-_JOBevh-Vwc2e0tg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 24px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #f2eae7;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--accent-rose);
+            color: var(--text-light);
+            padding: 14px 30px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--text-light);
+            color: var(--primary-dark);
+        }
+
+        /* Mobile-Friendly Cards Grid */
+        .services-section {
+            padding: 80px 6%;
+            text-align: center;
+            background-color: var(--bg-body);
+        }
+
+        .services-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent-rose);
+            box-shadow: 0 8px 24px rgba(193, 140, 116, 0.15);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .service-info {
+            padding: 25px 20px;
+            text-align: left;
+        }
+
+        .service-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .price-container {
+            margin-bottom: 12px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #9c8e8a;
+            font-size: 0.9rem;
+            margin-right: 6px;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: var(--accent-rose);
+            font-weight: 800;
+        }
+
+        .service-card p {
+            color: #544743;
+            font-size: 0.9rem;
+        }
+
+        /* High-Contrast Form Base */
+        .booking-section {
+            background-color: #ebdfe6;
+            padding: 80px 6%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .booking-container {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 650px;
+            border-radius: 8px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .booking-container h2 {
+            margin-bottom: 12px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.8rem;
+        }
+
+        .booking-container p {
+            text-align: center;
+            color: #b5a8a4;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--accent-rose);
+            letter-spacing: 0.5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #4d413e;
+            background-color: #3d3431;
+            color: var(--text-light);
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--accent-rose);
+            background-color: #332a27;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%23c18c74'><polygon points='0,0 10,0 5,5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--accent-rose);
+            color: var(--text-light);
+            padding: 16px;
+            border: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            margin-top: 5px;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--text-light);
+            color: var(--primary-dark);
+        }
+
+        /* Floating WhatsApp Widget */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp-green);
+            color: #fff;
+            padding: 14px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            z-index: 2000;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.03);
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--primary-dark);
+            color: #9c8e8a;
+            font-size: 0.85rem;
+        }
+
+        .credits {
+            margin-top: 12px;
+            font-size: 0.8rem;
+            color: #70625e;
+        }
+
+        .credits a {
+            color: var(--accent-rose);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .credits a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tailored Mobile Screen Overrides */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 4%;
+            }
+            nav {
+                display: none;
+            }
+            .hero {
+                height: 50vh;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero-content p {
+                font-size: 0.95rem;
+            }
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .booking-container {
+                padding: 30px 20px;
+            }
+            .services-section {
+                padding: 60px 4%;
+            }
+            .services-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Responsive Header Navigation -->
+    <header>
+        <div class="logo">ELITE<span>SALON</span></div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#booking" class="btn-nav">Secure Booking</a>
+        </nav>
+    </header>
+
+    <!-- Large Floating WhatsApp Action Button for Thumb Access -->
+    <a href="https://wa.me/254792706804" class="whatsapp-float" target="_blank">
+        <span>💬</span> Chat via WhatsApp
+    </a>
+
+    <!-- Hero Showcase Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium Styling.<br>Unbeatable Rates.</h1>
+            <p>High-end professional execution by elite artists at a fraction of standard salon pricing.</p>
+            <a href="#booking" class="btn-primary">Reserve Your Chair</a>
+        </div>
+    </section>
+
+    <!-- Premium Menu & Pricing Matrix -->
+    <section id="services" class="services-section">
+        <h2>Signature Service Menu</h2>
+        <p class="section-subtitle">Experience elite beauty services at our special promotional, budget-friendly baseline pricing.</p>
+        
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <img class="service-img" src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcT-U_akWmASByzvMD1zpkKj-Zkeb2jKNO2zcrsTr7q0sP4o3wpjNep4wrjjgKtzcZDsul_-Q6ViiPZsteI" alt="Executive Cut & Style">
+                <div class="service-info">
+                    <h3>Executive Cut & Style</h3>
+                    <div class="price-container">
+                        <span class="original-price">KSh 1,500</span>
+                        <span class="price">KSh 350</span>
+                    </div>
+                    <p>Complete custom mapping session, scalp cleaning massage, customized edge cutting, and flawless finish setting.</p>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="service-card">
+                <img class="service-img" src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQzaACiEPIUyd9bcoO_ZPzMjoEYbzUvT_enTD7yqKAFzqaC8jj5gljb222msOxPD6sC3QcbUnR3Ly5di-g" alt="Full Dimensional Color">
+                <div class="service-info">
+                    <h3>Full Dimensional Color</h3>
+                    <div class="price-container">
+                        <span class="original-price">KSh 4,500</span>
+                        <span class="price">KSh 1,200</span>
+                    </div>
+                    <p>High-definition structural coloring treatment using premium non-damage agents matched exactly to your personal style profile.</p>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-card">
+                <img class="service-img" src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQATLd7sGM9fcepBlvK3y4LHiqxms__sfpSUL4KRnOGwOoibX_bZSRR3Lrh1FEk-Lu2kN91RlIzSQJ2H_U" alt="Keratin Reconstruction">
+                <div class="service-info">
+                    <h3>Keratin Treatment</h3>
+                    <div class="price-container">
+                        <span class="original-price">KSh 3,000</span>
+                        <span class="price">KSh 800</span>
+                    </div>
+                    <p>Intense deep conditioning hydration matrix therapy constructed to clear frizz and locks structural root shine instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Container Form Block -->
+    <section id="booking" class="booking-section">
+        <div class="booking-container">
+            <h2>Instant Session Booking</h2>
+            <p>Select your time window below. Our operations team will send an instant confirmation within minutes.</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Client Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Requested Operation</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Choose a service option...</option>
+                        <option value="haircut">Executive Cut & Style — KSh 350</option>
+                        <option value="color">Full Dimensional Color — KSh 1,200</option>
+                        <option value="treatment">Keratin Treatment — KSh 800</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Target Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Target Window</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Finalize Booking Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Minimalist Footer Section -->
+    <footer>
+        <p>&copy; 2026 Elite Salon & Spa. All rights reserved.</p>
+        <p class="credits">Website designed & engineered by <a href="#">Hannah Njoroge</a></p>
+    </footer>
+
+</body>
+</html>
